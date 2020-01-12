@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <title>Student page</title>
+
+    </head>
+    <body>
+        <%= @students.each do |student| %>
+
+            <%= student.to_s %>
+            <%= link_to(student.to_s, student_path(student))%>
+        <% end %>
+    </body>
+</html>
