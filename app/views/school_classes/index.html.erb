@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>Class Title</h2><ul>
+        <% @school_classes.each do |school_class| %>
+               <li> <%= school_class.title %> <%= school_class.room_number %>
+                <%= link_to(school_class.title, school_class_path(school_class))%></li>
+        <% end %></ul>
+        <br>
+        <%= link_to("Make a new class!", new_school_class_path)%>
+    </body>
+</html>
